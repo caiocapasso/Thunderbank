@@ -4,9 +4,19 @@ body{
     background-color: orange !important; 
 }
 
+
 html {
     scroll-behavior: smooth;
     font-family: 'Roboto', sans-serif;
+}
+
+.bg-custom{
+    background-color: white !important; 
+    border-radius: 5px;
+}
+
+.logo-custom{
+    text-shadow: 2px 2px #ff0000;
 }
 
 .img-custom-height {

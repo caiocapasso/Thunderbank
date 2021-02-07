@@ -128,6 +128,14 @@ html {
     border-color: #ffd700!important;
 }
 
+.form-button--s{
+    text-align: start;
+}
+
+.form-button--e{
+    text-align: end;
+}
+
 @media screen and (max-width: 767px) {
     .container-form-width {
         top: 5%;
@@ -142,5 +150,13 @@ html {
 
     .title-dashboard{
         text-align: center
+    }
+
+    .form-button--s{
+        text-align: center;
+    }
+    
+    .form-button--e{
+        text-align: center;
     }
 }

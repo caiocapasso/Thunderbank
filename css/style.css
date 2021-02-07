@@ -51,7 +51,6 @@ html {
     display: flex;
     align-items: center;
     color: white;
-    padding: 0.5rem;
     margin: 0.5rem;
 }
 
@@ -87,18 +86,6 @@ html {
     max-width: 600px;
 }
 
-@media screen and (max-width: 767px) {
-    .container-form-width {
-        top: 5%;
-        left: 0%;
-        transform: translateX(0%);
-        max-width: 600px;
-    }
-
-    .container-margin{
-        max-width: 90%;
-    }
-}
 
 .sidebar {
     text-align: center;
@@ -124,4 +111,28 @@ html {
     color: white!important;
     font-weight: bold!important;
     border-color: white!important;
+}
+
+.btn-action:hover{
+    background-color: #ffd700!important;
+    color: black!important;
+    font-weight: bold!important;
+    border-color: #ffd700!important;
+}
+
+@media screen and (max-width: 767px) {
+    .container-form-width {
+        top: 5%;
+        left: 0%;
+        transform: translateX(0%);
+        max-width: 600px;
+    }
+
+    .container-margin{
+        max-width: 90%;
+    }
+
+    .title-dashboard{
+        text-align: center
+    }
 }

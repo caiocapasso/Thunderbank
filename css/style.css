@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap');
 
+body{
+    background-color: orange !important; 
+}
+
 html {
     scroll-behavior: smooth;
     font-family: 'Roboto', sans-serif;
@@ -9,11 +13,44 @@ html {
     max-height: 450px;
 }
 
+.img-message--height{
+    max-height: 200px;
+}
+
 .btn-custom-width {
     /* min-width: 100px;*/
     padding-left: 30px;
     padding-right: 30px;
 }
+
+.btn-padrao{
+    background: #ffd700;
+    border-radius: 20px;
+}
+
+.btn-text{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 10px;
+    margin: 20px;
+}
+
+.btn-text a{
+    text-decoration: none;
+    color: white;
+}
+
+.btn-text a:hover{
+    text-decoration: none;
+    color: white;
+}
+
 .container-footer {
     height: 20px;
     margin: 10px 50px 10px 50px;
@@ -27,4 +64,20 @@ html {
     line-height: 27px;
     letter-spacing: 0em;
     text-align: center;
+    color: #ffd700;
+}
+.container-form-width {
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 600px;
+}
+
+@media screen and (max-width: 767px) {
+    .container-form-width {
+        top: 5%;
+        left: auto;
+        transform: translateX(0%);
+        max-width: 600px;
+    }
 }

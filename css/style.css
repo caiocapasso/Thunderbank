@@ -92,21 +92,34 @@ html {
 
 .sidebar {
     height: 100%;
-    width: 20%;
+    width: 15%;
     position: fixed;
-    z-index: 1;
     overflow: auto;
+    background-color: white;
+    text-align: center;
+    align-items: center;
+    padding: 20px;
 }
 
 .center-dash {
-    margin-left: 20%;
-    width: 80%;
+    margin-left: 15%;
+    width: 85%;
 }
 
 .container {
-    padding: 30px;
+    padding: 20px;
 }
 
 .row-pad {
-    padding: 15px;
+    padding: 10px;
+}
+
+.title-dashboard {
+    color: white;
+}
+
+.btn-action {
+    background-color: orange!important;
+    color: white!important;
+    font-weight: bold!important;
 }

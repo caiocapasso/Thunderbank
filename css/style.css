@@ -4,3 +4,17 @@ html {
     scroll-behavior: smooth;
     font-family: 'Roboto', sans-serif;
 }
+
+.img-custom-height {
+    max-height: 450px;
+}
+
+.btn-custom-width {
+    /* min-width: 100px;*/
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.container-footer {
+    height: 20px;
+    margin: 10px 50px 10px 50px;
+}

@@ -101,19 +101,10 @@ html {
 }
 
 .sidebar {
-    height: 100%;
-    width: 15%;
-    position: fixed;
-    overflow: auto;
-    background-color: white;
     text-align: center;
     align-items: center;
     padding: 20px;
-}
-
-.center-dash {
-    margin-left: 15%;
-    width: 85%;
+    min-width: 110px;
 }
 
 .container {
@@ -132,4 +123,5 @@ html {
     background-color: orange!important;
     color: white!important;
     font-weight: bold!important;
+    border-color: white!important;
 }

@@ -17,6 +17,10 @@ html {
     max-height: 200px;
 }
 
+.card-width{
+    max-width: 400px!important;
+}
+
 .btn-custom-width {
     /* min-width: 100px;*/
     padding-left: 30px;
@@ -37,8 +41,8 @@ html {
     display: flex;
     align-items: center;
     color: white;
-    padding: 10px;
-    margin: 20px;
+    padding: 0.5rem;
+    margin: 0.5rem;
 }
 
 .btn-text a{
@@ -79,5 +83,9 @@ html {
         left: auto;
         transform: translateX(0%);
         max-width: 600px;
+    }
+
+    .container-margin{
+        max-width: 90%;
     }
 }

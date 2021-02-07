@@ -98,6 +98,14 @@ html {
     padding: 20px;
 }
 
+.bg-form{
+    background: #eeeeee;
+    border-radius: 10px;
+    border: lightgrey;
+    border-width: 1px;
+    border-style: solid;
+}
+
 .row-pad {
     padding: 10px;
 }

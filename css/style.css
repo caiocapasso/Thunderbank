@@ -160,3 +160,10 @@ html {
         text-align: center;
     }
 }
+
+
+.logo-shadow {
+    -webkit-filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7));
+    filter: drop-shadow( 3px 3px 2px rgba(0, 183, 255, 0.7));
+    /* Similar syntax to box-shadow */
+  }

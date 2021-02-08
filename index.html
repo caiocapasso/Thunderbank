@@ -74,7 +74,7 @@
             <img src="./img/happy_person.png" alt="imagem" class="img-fluid img-custom-height" />
         </div>
         <div class="col-sm-12 col-md-6">
-          <form class="card m-3 form-control-sm text-warning">
+          <form id="login-form" enctype="multipart/form-data" method="post" class="card m-3 form-control-sm text-warning">
             <h2 class="mt-3 text-center">
               Acesse sua conta
             </h2>
@@ -85,6 +85,7 @@
                   type="email"
                   class="form-control"
                   id="emailInput"
+                  name="login"
                 />
               </div>
               <div class="mb-2 input-group-sm">
@@ -93,6 +94,7 @@
                   type="password"
                   class="form-control"
                   id="passInput"
+                  name="pass"
                 />
               </div>
               <button type="submit" class="btn btn-warning btn-custom-width text-white">Entrar</button>
@@ -130,7 +132,6 @@
     </div> 
   </main>
     <!-- FOOTER -->
-    <footer>
       <footer class="footer mt-auto py-3 bg-warning">
         <div class="container">
           <div class="row align-items-center">
@@ -143,6 +144,6 @@
           </div>
         </div>
       </footer>
-    </footer>
+    <script src="js/app.js"></script>
   </body>
 </html>

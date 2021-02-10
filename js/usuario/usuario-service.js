@@ -1,5 +1,5 @@
-//const urlBase = 'https://bankline-accenture.herokuapp.com';
-const urlBase = 'http://localhost:8080/usuario';
+const urlBase = 'https://bankline-accenture.herokuapp.com/usuario';
+
 const headers = new Headers({ 'Content-Type': 'application/json' });
 
 const logar = (email, senha) => {

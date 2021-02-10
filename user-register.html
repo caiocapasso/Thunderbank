@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="./css/style.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
     <script src="https://kit.fontawesome.com/8ac0ce319f.js" crossorigin="anonymous"></script>
@@ -12,65 +12,82 @@
 </head>
 
 <body>
-    <!-- HEADER -->
-    </header>
     <!-- MAIN -->
-    <main id="container">
+    <main id="container" class="min-vh-100">
         <div class="container">
             <div class="position-absolute container-form-width">
-                <h1 class="mb-5 text-white text-center logo-custom">Thunder<i class="fas fa-poo-storm"></i>Bank</h1>
-
-                <form id="register" class="card m-3 form-control-sm text-warning">
-                    <h2 class="m-4 text-center text-black-75">
+                <h1 class="mb-5 text-white text-center logo-custom">
+                    Thunder<i class="fas fa-poo-storm"></i>Bank
+                </h1>
+                <form class="card m-3 form-control-sm text-warning">
+                    <h2 class="m-4 text-center">
                         Preencha os dados para requisitar sua conta e cartão de crédito
                     </h2>
                     <div class="m-5">
                         <div class="mb-2 input-group-sm">
                             <label for="cpfInput" class="form-label">cpf</label>
-                            <input type="number" class="form-control" name="cpf" id="cpfInput" required />
+                            <input type="number" class="form-control" id="cpfInput" required />
                         </div>
                         <div class="mb-2 input-group-sm">
                             <label for="nameInput" class="form-label">nome</label>
-                            <input type="text" class="form-control" name="nome" id="nameInput" required />
+                            <input type="text" class="form-control" id="nameInput" required />
                         </div>
                         <div class="mb-2 input-group-sm">
                             <label for="telInput" class="form-label">telefone</label>
-                            <input type="tel" class="form-control" name="telefone" id="telInput" pattern="[0-9]{3}-[0-9]{5}-[0-9]{4}" required />
+                            <input type="tel" class="form-control" id="telInput" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required />
                         </div>
                         <div class="mb-2 input-group-sm">
                             <label for="emailInput" class="form-label">e-mail</label>
-                            <input type="email" class="form-control" name="email" id="emailInput" required />
+                            <input type="email" class="form-control" id="emailInput" required />
                         </div>
                         <div class="mb-2 input-group-sm">
                             <label for="passInput" class="form-label">senha</label>
-                            <input type="password" class="form-control" name="senha" id="passInput" required />
+                            <input type="password" class="form-control" id="passInput" required />
                         </div>
                         <div class="mb-2 input-group-sm">
-                            <label for="passConfirmInput" class="form-label">confirmar senha</label>
-                            <input type="password" class="form-control" id="passConfirmInput" required />
-                        </div>
-                        <div class="mt-4 mb-3 text-justify">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="agreeCheck" required>
-                                <label class="form-check-label" for="agreeCheck">
-                    Eu li, estou ciente das condições de tratamento dos meus dados pessoais e dou meu consentimento, quando aplicável, conforme descrito nesta <a href="http://www.google.com.br">Política de Privacidade</a> 
+                            <label for="passConfirmInput" class="form-label">confirmar senha</label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  id="passConfirmInput"
+                  required
+                />
+              </div>
+              <div class="mt-4 mb-3 text-justify">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="agreeCheck"
+                    required
+                  />
+                  <label class="form-check-label" for="agreeCheck">
+                    Eu li, estou ciente das condições de tratamento dos meus
+                    dados pessoais e dou meu consentimento, quando aplicável,
+                    conforme descrito nesta
+                    <a href="http://www.google.com.br"
+                      >Política de Privacidade</a
+                    >
                   </label>
-                            </div>
-                        </div>
-                        <button type="submit" class="btn btn-warning btn-custom-width text-white">Enviar</button>
-                        <div class="mt-4">
-                            <a href="index.html">Já tem uma conta? Entre por aqui</a>
-                            <br/>
-                            <a href="user-recover.html">Perdeu sua senha? Recupere agora mesmo</a>
                         </div>
                     </div>
-                </form>
+                    <button type="submit" class="btn btn-warning btn-custom-width text-white">
+                Enviar
+              </button>
+                    <div class="mt-4">
+                        <a href="index.html">Já tem uma conta? Entre por aqui</a>
+                        <br />
+                        <a href="user-recover.html">Perdeu sua senha? Recupere agora mesmo</a
+                >
+              </div>
             </div>
+          </form>
         </div>
+      </div>
     </main>
     <!-- FOOTER -->
     <footer></footer>
-</body>
-<script type="module" src="js/usuario/usuario-controller.js"></script>
-
+  </body>
+  <script type="module" src="js/usuario/usuario-controller.js"></script>
 </html>

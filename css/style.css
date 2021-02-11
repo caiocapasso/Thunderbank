@@ -123,9 +123,14 @@ html {
 
 .btn-action:hover{
     background-color: #ffd700!important;
-    color: black!important;
+    /* color: black!important; */
     font-weight: bold!important;
     border-color: #ffd700!important;
+    
+}
+
+.text-center{
+    text-align: center;
 }
 
 .form-button--s{

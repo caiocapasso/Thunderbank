@@ -319,3 +319,7 @@ button.bg-bananaOrange:focus {
 a.text-bananaOrange:hover, a.text-bananaOrange:focus {
     color: #cc5a00 !important;
 }
+
+.table-cadastro {
+    background-color: white;
+}

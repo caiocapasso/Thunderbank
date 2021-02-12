@@ -50,7 +50,7 @@ html {
     line-height: 19px;
     display: flex;
     align-items: center;
-    color: white;
+    color: #ffd700;
     margin: 0.5rem;
 }
 
@@ -129,8 +129,20 @@ html {
     
 }
 
-.text-center{
-    text-align: center;
+.btn-send {
+    margin-bottom: 10px;
+    width: 100%;
+    font-size: 22px !important;
+    padding: 12px 24px 12px 24px !important;
+    border-radius: 40px !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    border: 0;
+}
+
+.text-center--wb{
+    text-align: -webkit-center;
 }
 
 .form-button--s{
@@ -139,6 +151,15 @@ html {
 
 .form-button--e{
     text-align: end;
+}
+
+.input-dp{
+    border: none !important;
+    border-bottom: 2px solid #ff7100 !important;
+    border-radius: 0 !important;
+    font-size: 18px!important;
+    font-weight: 700!important;
+    font-family: 'Roboto' !important;
 }
 
 @media screen and (max-width: 767px) {

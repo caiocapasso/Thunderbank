@@ -4,7 +4,6 @@ body{
     background-color: orange !important; 
 }
 
-
 html {
     scroll-behavior: smooth;
     font-family: 'Roboto', sans-serif;
@@ -343,4 +342,9 @@ a.text-bananaOrange:hover, a.text-bananaOrange:focus {
 
 .table-cadastro {
     background-color: white;
+    border-color: white!important;
+}
+
+.label-white {
+    color: white;
 }

@@ -1,5 +1,6 @@
+import { baseUrl } from '../util.js';
 //const urlBase = 'https://bankline-accenture.herokuapp.com/usuario';
-const urlBase = 'http://localhost:8080/usuario';
+const url = baseUrl + 'usuario';
 
 const headers = new Headers({ 'Content-Type': 'application/json' });
 

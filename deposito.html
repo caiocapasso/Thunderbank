@@ -18,65 +18,64 @@
             <div class="row row-pad">
                 <div class="col-sm-12 col-md-2 sidebar">
                     <div class="container text-center">
-                        <img class="logo-shadow" src="./img/icon-thunder.svg" alt="">
+                        <img class="logo-shadow" src="./img/icon-thunder.svg" alt="" />
                     </div>
 
                     <div class="row row-pad">
                         <a href="./user-dashboard.html" class="btn btn-warning btn-action form-control actions-button">
-                            <img src="./img/icon-flower-white.svg" alt=""> Início
+                            <img src="./img/icon-flower-white.svg" alt="" /> Início
                         </a>
                     </div>
 
                     <div class="row row-pad">
                         <a href="./deposito.html" class="btn btn-warning btn-action form-control actions-button">
-                            <img src="./img/icon-flower-white.svg" alt=""> Depósitos
+                            <img src="./img/icon-flower-white.svg" alt="" /> Depósitos
                         </a>
                     </div>
                     <div class="row row-pad">
                         <a href="./planos-contas.html" class="btn btn-warning btn-action form-control actions-button">
-                            <img src="./img/icon-flower-white.svg" alt=""> Planos
+                            <img src="./img/icon-flower-white.svg" alt="" /> Planos
                         </a>
                     </div>
-                   
-                    <div class="row row-pad ">
-                        
+
+                    <div class="row row-pad">
                         <a href="" class="btn btn-warning btn-action form-control actions-button">
-                            <img src="./img/icon-flower-white.svg" alt=""> Transferência    
+                            <img src="./img/icon-flower-white.svg" alt="" /> Transferência
                         </a>
-                        
                     </div>
                 </div>
                 <div class="col-sm-12 col-md-10">
                     <div class="container mt-5 mb-4">
-                        <h3 class="title-dashboard">
-                            Depósito
-                        </h3>
+                        <h3 class="title-dashboard">Depósito</h3>
                     </div>
                     <div class="row row-pad">
                         <div class="col text">
                             <div class="card">
                                 <div class="card-header">
-                                    <img src="/img/icon-money-2.svg" alt=""> Realize seu Depósito
+                                    <img src="/img/icon-money-2.svg" alt="" /> Realize seu Depósito
                                 </div>
                                 <div class="container text-center--wb">
                                     <div class="card-body p-4 p-auto">
                                         <div class="col-sm-12 col-md-8 m-3">
-                                            <input type="date" name="name" class="form-control input-dp" placeholder="Data" id="date">
+                                            <input type="date" name="name" class="form-control input-dp" placeholder="Data" id="date" />
                                         </div>
                                         <div class="col-sm-12 col-md-8 m-3">
-                                            <input type="text" name="name" class="form-control input-dp" placeholder="Descrição" id="description"
-                                            >
+                                            <input type="text" name="name" class="form-control input-dp" placeholder="Descrição" id="description" />
                                         </div>
                                         <div class="col-sm-12 col-md-8 m-3">
-                                            <input type="text" name="name" class="form-control input-dp" placeholder="Valor" id="moneyvalue">
+                                            <input type="text" name="name" class="form-control input-dp" placeholder="Valor" id="moneyvalue" />
                                         </div>
                                         <div class="col-sm-12 col-md-8 m-3 text">
                                             <button type="button" id="sendtransfer" class="btn-send btn-action mt-4 m-2 p-2">
-                                                <div class="text-center">
-                                                </div>
-                                                Depositar
-                                                <span class="p-2"><i class="fas fa-arrow-right" aria-hidden="true"></i></span>
-                                            </button>
+                          <div class="text-center"></div>
+                          Depositar
+                          <span class="p-2"
+                            ><i
+                              class="fas fa-arrow-right"
+                              aria-hidden="true"
+                            ></i
+                          ></span>
+                        </button>
                                         </div>
                                     </div>
                                 </div>
@@ -88,15 +87,12 @@
                         <div class="col-sm-12 col-md-6 mt-2">
                             <div class="card card-pad-top">
                                 <div class="card-header">
-                                    <img src="./img/icon-money.svg" alt=""> Conta
+                                    <img src="./img/icon-money.svg" alt="" /> Conta
                                 </div>
                                 <div class="card-body">
                                     <h5 class="card-title">Saldo disponível</h5>
                                     <p class="card-text text-center" style="font-size: 30px">
-                                        <strong>R$ 10.000,00</strong>
-                                    </p>
-                                    <p class="card-text">
-                                        Transações <strong>R$ 2.120,21</strong>
+                                        <strong data-saldo-disponivel></strong>
                                     </p>
                                 </div>
                             </div>
@@ -104,7 +100,7 @@
                         <div class="col-sm-12 col-md-6 mt-2">
                             <div class="card card-pad-top">
                                 <div class="card-header">
-                                    <img src="./img/icon-card.svg" alt=""> Conta Crédito
+                                    <img src="./img/icon-card.svg" alt="" /> Conta Crédito
                                 </div>
                                 <div class="card-body">
                                     <h5 class="card-title">Fatura atual</h5>
@@ -112,19 +108,19 @@
                                         <strong>R$ 120,88</strong>
                                     </p>
                                     <p class="card-text">
-                                        Limite disponível <strong>R$ 9.120,88</strong>
+                                        Limite disponível
+                                        <strong data-limite-disponivel>R$ 9.120,88</strong>
                                     </p>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
     </main>
     <footer></footer>
 </body>
-<script type="module" src="js/usuario/usuario-controller.js"></script>
+<script type="module" src="js/dashboard/dashbard-controller.js"></script>
 
 </html>

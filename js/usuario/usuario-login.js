@@ -1,6 +1,5 @@
 import { usuarioService } from './usuario-service.js';
-
-const urlBase = 'https://bankline-accenture.herokuapp.com';
+import { headers } from '../util.js';
 
 (() => {
     var loginForm = document.querySelector('#login-form');

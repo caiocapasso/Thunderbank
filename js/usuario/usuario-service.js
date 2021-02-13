@@ -1,12 +1,12 @@
 import { baseUrl } from '../util.js';
-//const urlBase = 'https://bankline-accenture.herokuapp.com/usuario';
+
 const url = baseUrl + 'usuario';
 
 const headers = new Headers({ 'Content-Type': 'application/json' });
 
 const logar = (email, senha) => {
 
-    return fetch(urlBase + '/logar', {
+    return fetch(url + '/logar', {
         method: 'POST',
         headers: headers,
         body: JSON.stringify({

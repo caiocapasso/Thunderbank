@@ -20,13 +20,11 @@
                     <div class="container text-center">
                         <img class="logo-shadow" src="./img/icon-thunder.svg" alt="" />
                     </div>
-
                     <div class="row row-pad">
                         <a href="./user-dashboard.html" class="btn btn-warning btn-action form-control actions-button">
                             <img src="./img/icon-flower-white.svg" alt="" /> Início
                         </a>
                     </div>
-
                     <div class="row row-pad">
                         <a href="./deposito.html" class="btn btn-warning btn-action form-control actions-button">
                             <img src="./img/icon-flower-white.svg" alt="" /> Depósitos
@@ -37,7 +35,6 @@
                             <img src="./img/icon-flower-white.svg" alt="" /> Planos
                         </a>
                     </div>
-
                     <div class="row row-pad">
                         <a href="" class="btn btn-warning btn-action form-control actions-button">
                             <img src="./img/icon-flower-white.svg" alt="" /> Transferência
@@ -57,13 +54,16 @@
                                 <div class="container text-center--wb">
                                     <div class="card-body p-4 p-auto">
                                         <div class="col-sm-12 col-md-8 m-3">
-                                            <input type="date" name="name" class="form-control input-dp" placeholder="Data" id="date" />
+                                            <input type="number" name="name" class="form-control input-dp" placeholder="Valor" id="moneyvalue" />
                                         </div>
                                         <div class="col-sm-12 col-md-8 m-3">
                                             <input type="text" name="name" class="form-control input-dp" placeholder="Descrição" id="description" />
                                         </div>
                                         <div class="col-sm-12 col-md-8 m-3">
-                                            <input type="text" name="name" class="form-control input-dp" placeholder="Valor" id="moneyvalue" />
+                                            <select name="plano" id="plano" class="form-control">
+                          <!-- DEVERÁ SER PRRENCHIDO COM O CADASTRO DE PLANO DE CONTAS DO USUÁRIO LOGADO (SOMENTE TIPO RECEITA!) -->
+                          <option value="">DESCRIÇÃO DO PLANO DE CONTA</option>
+                        </select>
                                         </div>
                                         <div class="col-sm-12 col-md-8 m-3 text">
                                             <button type="button" id="sendtransfer" class="btn-send btn-action mt-4 m-2 p-2">

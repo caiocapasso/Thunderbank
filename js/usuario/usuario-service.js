@@ -5,7 +5,6 @@ const url = baseUrl + 'usuario';
 const headers = new Headers({ 'Content-Type': 'application/json' });
 
 const logar = (email, senha) => {
-
     return fetch(url + '/logar', {
         method: 'POST',
         headers: headers,

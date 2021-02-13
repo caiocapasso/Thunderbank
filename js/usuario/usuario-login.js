@@ -1,5 +1,4 @@
 import { usuarioService } from './usuario-service.js';
-import { headers } from '../util.js';
 
 (() => {
     var loginForm = document.querySelector('#login-form');

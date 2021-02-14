@@ -8,6 +8,16 @@ const parseJwt = (token) => {
     return JSON.parse(jsonPayload);
 };
 
+// exemplo objeto decodificado: 
+//jwt = {
+    //conta: 1 -> conta do usuario
+    //exp: 1613334911
+    //iat: 1613331311
+    //iss: "bank line"
+    //sub: "1" -> id do usuario
+    //nome: "franklin" 
+//}
+
 export const tokenService = {
     parseJwt
 }

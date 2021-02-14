@@ -24,7 +24,6 @@ const logar = (email, senha) => {
       return response;
     })
     .then((resposta) => {
-      console.log("resposta = ", resposta);
       return resposta.json();
     })
     .catch((error) => {
@@ -53,7 +52,6 @@ const criar = ({ email, senha, nome, cpf, tel }) => {
       return response;
     })
     .then((resposta) => {
-      console.log("resposta = ", resposta);
       return resposta.json();
     })
     .catch((error) => {
@@ -67,7 +65,7 @@ const obterDados = () => {
     headers.append("authorization", "Bearer " + token);
     const jwtDecode = tokenService.parseJwt(token);
 
-    return fetch(url + "/findByid/" + jwtDecode.conta, {
+    return fetch(url + "/findByid/" + jwtDecode.sub, {
       method: "GET",
       headers: headers,
     })

@@ -18,7 +18,6 @@
     <title>Thunderbank - Cadastro de Plano de Conta</title>
   </head>
   <body>
-    <header></header>
     <main id="container" class="min-vh-100">
       <div class="container-fluid">
         <div class="row row-pad">
@@ -44,7 +43,7 @@
             </div>
             <div class="row row-pad">
               <a
-                href=""
+                href="./planos-contas.html"
                 class="btn btn-warning btn-action form-control actions-button"
               >
                 <img src="./img/icon-flower-white.svg" alt="" /> Planos
@@ -52,11 +51,35 @@
             </div>
             <div class="row row-pad">
               <a
-                href=""
+                href="./pagamento.html"
                 class="btn btn-warning btn-action form-control actions-button"
               >
-                <img src="./img/icon-flower-white.svg" alt="" /> Transferência
+                <img src="./img/icon-flower-white.svg" alt="" /> Pagamentos
               </a>
+            </div>
+            <div class="row row-pad">
+              <a
+                href="./transferencia.html"
+                class="btn btn-warning btn-action form-control actions-button"
+              >
+                <img src="./img/icon-flower-white.svg" alt="" /> Transferências
+              </a>
+            </div>
+            <div class="row row-pad">
+              <a
+                href="./user-profile.html"
+                class="btn btn-warning btn-action form-control actions-button"
+              >
+                <img src="./img/icon-flower-white.svg" alt="" /> Perfil
+              </a>
+            </div>
+            <div class="row row-pad">
+              <button
+                class="btn btn-warning btn-action form-control actions-button"
+                onclick="sair()"
+              >
+                <img src="./img/icon-flower-white.svg" alt="" /> Sair
+              </button>
             </div>
           </div>
           <div class="col-sm-12 col-md-10">
@@ -128,5 +151,7 @@
         </div>
       </div>
     </main>
+    <script type="module" src="js/user-account-plan-create.js"></script>
+    <script type="module" src="./js/util.js"></script>
   </body>
 </html>

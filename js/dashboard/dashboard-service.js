@@ -8,7 +8,8 @@ const obterSaldo = () => {
     const headers = new Headers({ "Content-Type": "application/json" });
     headers.append("authorization", "Bearer " + token);
     const jwtDecode = tokenService.parseJwt(token);
-
+    console.log('jwtDecode', jwtDecode)
+ 
     return fetch(url + "/" + jwtDecode.conta, {
       method: "GET",
       headers: headers,

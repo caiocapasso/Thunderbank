@@ -5,8 +5,9 @@ const url = baseUrl + "lancamento";
 const salvar = ({ valor, descricao, planoDeConta }) => {
   if (token) {
     const headers = new Headers({ "Content-Type": "application/json" });
-    const jwtDecode = tokenService.parseJwt(token);
     headers.append("authorization", "Bearer " + token);
+
+    const jwtDecode = tokenService.parseJwt(token);
 
     return fetch(url, {
       method: "POST",
@@ -39,6 +40,7 @@ const obterLancamentos = () => {
   if (token) {
     const headers = new Headers({ "Content-Type": "application/json" });
     headers.append("authorization", "Bearer " + token);
+    
     const jwtDecode = tokenService.parseJwt(token);
 
     return fetch(url + "/" + jwtDecode.conta, {

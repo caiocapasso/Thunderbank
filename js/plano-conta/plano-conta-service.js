@@ -11,7 +11,6 @@ export const planosReceita = () => {
             return response.json();
         })
     }
-
 }
 
 export const planoContaService = {

@@ -1,40 +1,63 @@
-import { baseUrl } from '../util.js';
+import { tokenService } from '../token/token-service.js';
+import { baseUrl, token } from '../util.js';
 
-const url = baseUrl + 'usuario';
+const url = baseUrl + "usuario";
 
-const headers = new Headers({ 'Content-Type': 'application/json' });
+const headers = {
+  Accept: "application/json",
+  "Content-Type": "application/json",
+};
 
 const logar = (email, senha) => {
-    return fetch(url + '/logar', {
-        method: 'POST',
-        headers: headers,
-        body: JSON.stringify({
-            login: email,
-            senha: senha
-        })
-    }).then(resposta => {
-        return resposta.json();
-    })
-}
+  return fetch(url + "/logar", {
+    method: "POST",
+    headers: headers,
+    body: JSON.stringify({
+      login: email,
+      senha: senha,
+    }),
+  }).then((resposta) => {
+    console.log("resposta = ", resposta);
+    return resposta.json();
+  });
+};
 
-const criar = (usuario) => {
-    return fetch(urlBase, {
-        method: 'POST',
-        headers: headers,
-        body: JSON.stringify({
-            login: usuario.email,
-            senha: usuario.senha,
-            nome: usuario.nome,
-            cpf: usuario.cpf,
-            contaTipo: "CORRENTE"
+const criar = ({ email, senha, nome, cpf, tel }) => {
+  return fetch(url, {
+    method: "POST",
+    headers: headers,
+    body: JSON.stringify({
+      contaTipo: "CORRENTE",
+      cpf: cpf,
+      login: email,
+      nome: nome,
+      saldo: 1000,
+      senha: senha,
+      //tel: tel
+    }),
+  }).then((resposta) => {
+    console.log("resposta = ", resposta);
+    return resposta.json();
+  });
+};
 
-        })
-    })
-}
+const obterDados = () => {
+  if (token) {
+    const headers = new Headers({ "Content-Type": "application/json" });
+    headers.append("authorization", "Bearer " + token);
+    const jwtDecode = tokenService.parseJwt(token);
 
-
+    return fetch(url + "/findByid/" + jwtDecode.conta, {
+      method: "GET",
+      headers: headers,
+    }).then((response) => {
+      return response.json();
+    });
+  }
+};
 
 export const usuarioService = {
-    logar,
-    criar
-}
+  logar,
+  criar,
+  obterDados,
+};

@@ -1,15 +1,30 @@
-import { tokenService } from '../token/token-service.js'
-import { lancamentoService } from '../lancamento/lancamento-service.js'
-import { baseUrl, token } from '../util.js';
+import { lancamentoService } from '../lancamento/lancamento-service.js';
 
-(() => {
-    const form = document.querySelector('#depositar')
+document
+  .querySelector("#deposito-form")
+  ?.addEventListener("submit", (event) => {
+    console.log("depositar form");
+    event.preventDefault();
 
-    form.addEventListener('submit', (event) => {
-        event.preventDefault();
-        let lancamento = new FormData(form);
-        lancamentoService.salvar(lancamento).then(window.location.href = 'user-dashboard.html').catch(error => {
-            console.log(error)
-        })
-    })
-})()
+    const valor = document.querySelector("#inputValor").value;
+    const descricao = document.querySelector("#inputDescricao").value;
+    const planoDeConta = document.querySelector("#inputPlanoDeConta").value;
+
+    lancamentoService
+      .salvar({
+        valor: valor,
+        descricao: descricao,
+        planoDeConta: planoDeConta
+      })      
+      .then(response => {
+        if (response){
+          alert('deposito realizado');
+          window.location.replace('./user-dashboard.html')
+        } else {
+          alert('houve um problema no deposito. Tente novamente mais tarde');
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  });

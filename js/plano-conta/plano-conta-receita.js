@@ -1,14 +1,16 @@
 import { planoContaService } from '../plano-conta/plano-conta-service.js';
 
-(() => {
-    planoContaService.planosReceita().then(response => {
-        const select = document.getElementById('plano');
+const getPlanos = planoContaService.getPlanosReceita().then((response) => {
+  const select = document.querySelector("#inputPlanoDeConta");
 
-        response.forEach(p => {
-            let option = document.createElement('option');
-            option.text = p.descricao;
-            option.value = p.tipo;
-            select.appendChild(option);
-        })
-    })
-})()
+  if (response){
+    response.forEach((p) => {
+      let option = document.createElement("option");
+      option.text = p.descricao;
+      option.value = p.tipo;
+      select.appendChild(option);
+    });
+  }
+});
+
+document.addEventListener("DOMContentLoaded", getPlanos, false);

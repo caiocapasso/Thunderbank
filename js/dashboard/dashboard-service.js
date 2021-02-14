@@ -12,9 +12,19 @@ const obterSaldo = () => {
     return fetch(url + "/" + jwtDecode.conta, {
       method: "GET",
       headers: headers,
-    }).then((response) => {
-      return response.json();
-    });
+    })
+    .then((response) => {
+      if (!response.ok) {
+        throw Error(`Erro: ${response.status} - ${response.statusText}`);
+      }
+      return response;
+    })
+      .then((response) => {
+        return response.json();
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   }
 };
 

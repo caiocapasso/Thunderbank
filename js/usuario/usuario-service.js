@@ -1,5 +1,5 @@
-import { tokenService } from '../token/token-service.js';
-import { baseUrl, token } from '../util.js';
+import { tokenService } from "../token/token-service.js";
+import { baseUrl, token } from "../util.js";
 
 const url = baseUrl + "usuario";
 
@@ -16,10 +16,20 @@ const logar = (email, senha) => {
       login: email,
       senha: senha,
     }),
-  }).then((resposta) => {
-    console.log("resposta = ", resposta);
-    return resposta.json();
-  });
+  })
+    .then((response) => {
+      if (!response.ok) {
+        throw Error(`Erro: ${response.status} - ${response.statusText}`);
+      }
+      return response;
+    })
+    .then((resposta) => {
+      console.log("resposta = ", resposta);
+      return resposta.json();
+    })
+    .catch((error) => {
+      console.log(error);
+    });
 };
 
 const criar = ({ email, senha, nome, cpf, tel }) => {
@@ -35,10 +45,20 @@ const criar = ({ email, senha, nome, cpf, tel }) => {
       senha: senha,
       //tel: tel
     }),
-  }).then((resposta) => {
-    console.log("resposta = ", resposta);
-    return resposta.json();
-  });
+  })
+    .then((response) => {
+      if (!response.ok) {
+        throw Error(`Erro: ${response.status} - ${response.statusText}`);
+      }
+      return response;
+    })
+    .then((resposta) => {
+      console.log("resposta = ", resposta);
+      return resposta.json();
+    })
+    .catch((error) => {
+      console.log(error);
+    });
 };
 
 const obterDados = () => {
@@ -50,9 +70,19 @@ const obterDados = () => {
     return fetch(url + "/findByid/" + jwtDecode.conta, {
       method: "GET",
       headers: headers,
-    }).then((response) => {
-      return response.json();
-    });
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw Error(`Erro: ${response.status} - ${response.statusText}`);
+        }
+        return response;
+      })
+      .then((response) => {
+        return response.json();
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   }
 };
 

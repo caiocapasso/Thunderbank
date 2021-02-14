@@ -47,10 +47,6 @@ document.querySelector("#register-form")?.addEventListener("submit", function (e
   });
 
 
-
-
-
-
 const sair = () => {
   console.log("saiu");
   window.localStorage.removeItem("token");

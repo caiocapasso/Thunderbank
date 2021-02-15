@@ -1,12 +1,15 @@
-import { formatarDinheiro, formatarData } from "../js/util.js";
-import { lancamentoService } from "./lancamento/lancamento-service.js";
-import { dashboardService } from "./dashboard/dashboard-service.js";
-import { tokenService } from "./token/token-service.js";
-import { token } from "./util.js";
+import { formatarDinheiro, formatarData } from "../util.js";
+import { lancamentoService } from "../services/lancamento-service.js";
+import { dashboardService } from "../services/dashboard-service.js";
+import { tokenService } from "../services/token-service.js";
+import { token } from "../util.js";
 
 
 const nomeUsuario = document.querySelector("#nome-usuario");
 nomeUsuario.textContent = tokenService.parseJwt(token).nome;
+
+const numeroConta = document.querySelector("#numero-conta");
+numeroConta.textContent = tokenService.parseJwt(token).conta;
 
 const saldoDisponivel = document.querySelector("[data-saldo-disponivel]");
 const faturaAtual = document.querySelector("[data-fatura-atual]");
@@ -15,6 +18,7 @@ const limiteDisponivel = document.querySelector("[data-limite-disponivel]");
 const ultimosLancamentos = document.querySelector("#ultimos-lancamentos");
 
 dashboardService.obterSaldo().then((response) => {
+  console.log('obter saldo = ', response);
   saldoDisponivel.textContent = formatarDinheiro(response.saldo);
   faturaAtual.textContent = formatarDinheiro(response.fatura);
   limiteDisponivel.textContent = formatarDinheiro(response.limite);

@@ -1,4 +1,4 @@
-import { usuarioService } from "./usuario/usuario-service.js"
+import { usuarioService } from "../services/usuario-service.js"
 
 document
   .querySelector("#register-form")

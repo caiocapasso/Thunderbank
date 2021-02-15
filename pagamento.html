@@ -102,7 +102,7 @@
                           name="name"
                           class="form-control input-dp"
                           placeholder="Valor"
-                          id="moneyvalue"
+                          id="valor"
                         />
                       </div>
                       <div class="col-sm-12 col-md-8 m-3">
@@ -111,17 +111,18 @@
                           name="name"
                           class="form-control input-dp"
                           placeholder="Descrição"
-                          id="description"
+                          id="descricao"
                         />
                       </div>
                       <div class="col-sm-12 col-md-8 m-3">
                         <select
                           name="plano"
-                          id="plano"
+                          id="inputPlanoDeConta"
                           class="form-control input-dp"
                         >
-                          <!-- DEVERÁ SER PRRENCHIDO COM O CADASTRO DE PLANO DE CONTAS DO USUÁRIO LOGADO (SOMENTE TIPO DESPESA!) -->
-                          <option value="">DESCRIÇÃO DO PLANO DE CONTA</option>
+                        <option disabled selected value>
+                          Selecione Plano de Contas
+                        </option>
                         </select>
                       </div>
                       <div class="col-sm-12 col-md-8 m-3 text">
@@ -150,7 +151,7 @@
       </div>
     </main>
     <footer></footer>
-    <script type="module" src="js/user-payment.js"></script>
+    <script type="module" src="./js/controllers/user-payment.js"></script>
     <script type="module" src="./js/util.js"></script>
     <!-- <script type="module" src="js/usuario/usuario-controller.js"></script> -->
   </body>

@@ -1,5 +1,5 @@
-import { lancamentoService } from "./lancamento/lancamento-service.js";
-import { planoContaService } from "./plano-conta/plano-conta-service.js";
+import { lancamentoService } from "../services/lancamento-service.js";
+import { planoContaService } from "../services/plano-conta-service.js";
 
 document
   .querySelector("#deposito-form")

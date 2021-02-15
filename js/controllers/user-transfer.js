@@ -1,7 +1,8 @@
-import { lancamentoService } from "./lancamento/lancamento-service.js";
-import { planoContaService } from "./plano-conta/plano-conta-service.js";
+import { lancamentoService } from "../services/lancamento-service.js";
+import { planoContaService } from "../services/plano-conta-service.js";
 
-//FIXME: adaptar para usar no payment
+
+//FIXME: adaptar para usar no transfer
 // document
 //   .querySelector("#deposito-form")
 //   ?.addEventListener("submit", (event) => {
@@ -30,8 +31,6 @@ import { planoContaService } from "./plano-conta/plano-conta-service.js";
 //         console.log(error);
 //       });
 //   });
-
-
 
 const getPlanos = planoContaService.getPlanosReceita().then((response) => {
   const select = document.querySelector("#inputPlanoDeConta");

@@ -1,4 +1,4 @@
-import { tokenService } from '../token/token-service.js';
+import { tokenService } from './token-service.js';
 import { baseUrl, token } from '../util.js';
 
 const url = baseUrl + "conta/dashboard";

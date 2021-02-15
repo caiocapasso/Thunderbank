@@ -1,4 +1,4 @@
-import { usuarioService } from "./usuario/usuario-service.js"
+import { usuarioService } from "../services/usuario-service.js"
 
 //FIXME: adaptar para fazer funcionar para editar os dados do usuário com base nos campos do profile-form
 // document.querySelector("#login-form")?.addEventListener("submit", function (e) {

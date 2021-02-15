@@ -1,4 +1,7 @@
 import { usuarioService } from "../services/usuario-service.js"
+import { protegeUrl } from '../util.js'
+
+protegeUrl()
 
 //FIXME: adaptar para fazer funcionar para editar os dados do usuário com base nos campos do profile-form
 // document.querySelector("#login-form")?.addEventListener("submit", function (e) {
@@ -6,7 +9,7 @@ import { usuarioService } from "../services/usuario-service.js"
 //     console.log("logar usuario");
 //     const email = document.querySelector("#emailInput").value;
 //     const senha = document.querySelector("#passInput").value;
-  
+
 //     usuarioService
 //       .logar(email, senha)
 //       .then((resposta) => {
@@ -22,17 +25,15 @@ import { usuarioService } from "../services/usuario-service.js"
 
 
 const obterDados = () => {
-  usuarioService.obterDados().then((response) => {
-    if (response){
-      console.log("response");
-      document.querySelector("#nomeInput").value = response.nome;
-      document.querySelector("#cpfInput").value = response.cpf;
-      document.querySelector("#telInput").value = response.tel;
-      document.querySelector("#emailInput").value = response.username;
-    }
-  });
+    usuarioService.obterDados().then((response) => {
+        if (response) {
+            console.log("response");
+            document.querySelector("#nomeInput").value = response.nome;
+            document.querySelector("#cpfInput").value = response.cpf;
+            document.querySelector("#telInput").value = response.tel;
+            document.querySelector("#emailInput").value = response.username;
+        }
+    });
 };
 
 document.addEventListener("DOMContentLoaded", obterDados, false);
-
-

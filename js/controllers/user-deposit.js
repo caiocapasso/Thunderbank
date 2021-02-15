@@ -7,19 +7,11 @@ protegeUrl()
 const form = document.querySelector("#deposito-form")
 
 form.addEventListener("submit", (event) => {
-    console.log("depositar form");
     event.preventDefault();
-
-    const valor = document.querySelector("#inputValor").value;
-    const descricao = document.querySelector("#inputDescricao").value;
-    const planoDeConta = document.querySelector("#inputPlanoDeConta").value;
+    let lancamento = new FormData(form)
 
     lancamentoService
-        .salvar({
-            valor: valor,
-            descricao: descricao,
-            planoDeConta: planoDeConta,
-        })
+        .salvar(lancamento)
         .then((response) => {
             if (response) {
                 alert("deposito realizado");

@@ -12,7 +12,7 @@ const salvar = (lancamento) => {
         return fetch(url, {
             method: 'POST',
             body: JSON.stringify({
-                'contaId': jwtDecode.conta,
+                'contaId': lancamento.get('conta-origem'),
                 'contaDestinoNumero': lancamento.get('numeroContaDestino'),
                 'planoContaId': lancamento.get('plano'),
                 'valor': lancamento.get('valor'),
@@ -33,7 +33,7 @@ const obterLancamentos = () => {
 
         const jwtDecode = tokenService.parseJwt(token);
 
-        return fetch(url + "/" + jwtDecode.conta, {
+        return fetch(url + "/" + jwtDecode.contas[0], {
                 method: "GET",
                 headers: headers,
             })

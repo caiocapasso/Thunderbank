@@ -1,5 +1,12 @@
 import { lancamentoService } from "../services/lancamento-service.js";
 import { planoContaService } from "../services/plano-conta-service.js";
+import { tokenService } from "../services/token-service.js";
+import { token, protegeUrl } from "../util.js";
+
+protegeUrl()
+
+const dados = tokenService.parseJwt(token)
+document.getElementById('conta-origem').value = dados.contas[0]
 
 const form = document.querySelector('#transferencia')
 form.addEventListener("submit", (event) => {

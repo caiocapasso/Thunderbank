@@ -19,7 +19,6 @@ const limiteDisponivel = document.querySelector("[data-limite-disponivel]");
 const ultimosLancamentos = document.querySelector("#ultimos-lancamentos");
 
 dashboardService.obterSaldo().then((response) => {
-    console.log('obter saldo = ', response);
     saldoDisponivel.textContent = formatarDinheiro(response.saldo);
     faturaAtual.textContent = formatarDinheiro(response.fatura);
     limiteDisponivel.textContent = formatarDinheiro(response.limite);
